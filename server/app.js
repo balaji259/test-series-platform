@@ -6,6 +6,7 @@ const authRouter=require("./routes/auth.js");
 const resultRouter=require("./routes/result.js")
 const testRouter=require("./routes/test.js");
 const connectDB=require('./db/db.js');
+const path=require("path");
 
 const app = express();
 
