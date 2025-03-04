@@ -51,7 +51,7 @@ const TeacherDashboard = () => {
       const userId = payload.id;
 
       const response = await axios.post(
-        "/test/create",
+        "http://localhost:5000/test/create",
         { ...testData, createdBy: userId },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -65,7 +65,7 @@ const TeacherDashboard = () => {
 
   const fetchResults = async () => {
     try {
-      axios.get("/result/getresults")
+      axios.get("http://localhost:5000/result/getresults")
       .then(response => {
         console.log("API Response:", response.data);
         const transformedResults = Object.entries(response.data); // Convert object to array

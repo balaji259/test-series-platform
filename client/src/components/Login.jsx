@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { data } = await axios.post("/auth/login", { email, password });
+    const { data } = await axios.post("http://localhost:5000/auth/login", { email, password });
     localStorage.setItem("token", data.token);
     navigate(data.role === "teacher" ? "/teacher-dashboard" : "/student-dashboard");
   };
