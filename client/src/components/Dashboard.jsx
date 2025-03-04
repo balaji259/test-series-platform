@@ -9,7 +9,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTests = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/test/");
+        const res = await axios.get("/test/");
         setTests(res.data);
         console.log(res.data);
       } catch (error) {

@@ -13,7 +13,7 @@ const Auth = ({ type }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const endpoint = type === "login" ? "/auth/login" : "/auth/register";
-    const res = await axios.post(`${backendUrl}${endpoint}`, form);
+    const res = await axios.post(`${endpoint}`, form);
     console.log(res.data);
     console.log("form submitted successfully!");
     localStorage.setItem('token',res.data.token);

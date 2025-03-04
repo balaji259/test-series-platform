@@ -13,7 +13,7 @@ const TakeTest = () => {
   useEffect(() => {
     const fetchTest = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/test/${id}`);
+        const res = await axios.get(`/test/${id}`);
         setTest(res.data);
       } catch (error) {
         console.error("Error fetching test:", error);
